@@ -1,0 +1,16 @@
+{
+  "name": "paynow_integration",
+  "version": "1.0.0",
+  "description": "Paynow integration plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
+  },
+  "author": "luke_tembani_munyandu",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "paynow": "^1.0.9"
+  }
+}

@@ -1,0 +1,25 @@
+const express = require("express");
+const paynow = require("./functions/payment");
+
+const app = express();
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+
+
+app.use("/", async(req,res)=>{
+
+    let result = await paynow.pay("0770000000","TEST",1.00,"test@gmail.com");
+
+    console.log(result);
+
+    //On Success - Paid is printed
+    //On Failure - Cancelled is printed
+
+    res.status(200).send("Working...")
+})
+
+
+
+app.listen(9000,()=>{
+    console.log(`APP RUNNING ON 9000`);
+})
